@@ -1,14 +1,29 @@
 import React from 'react';
 import './ProductListItem.css';
 
-export default function ProductListItem({name, price, imageUrl, onAddToCart, isSoldOut, isOnSale}) {
+import Heading from "../../atoms/Heading/Heading";
+import Card from "../../atoms/Card/Card";
+import Button from "../../atoms/Button/Button";
+import Text from "../../atoms/Text/Text"
+
+export default function ProductListItem({
+  name,
+  price,
+  imageUrl,
+  onAddToCart,
+  isSoldOut,
+  isOnSale,
+}) {
   return (
-    // Create new component for card later
-    <div className="card">
-      <h2>{name} {isOnSale && "(On Sale)"}</h2>
-      <img src={imageUrl} alt=""/>
-      <small>{price}</small>
-      <button onClick={onAddToCart} disabled="{isSoldOut}"> {isSoldOut ? "Sold out" : "Add to Cart"}</button>
-    </div>
+    <Card highlight={isOnSale}>
+      <Heading>
+        {name} {isOnSale && "(On Sale)"}
+      </Heading>
+      <img src={imageUrl} alt="" />
+      <Text>{price}</Text>
+      <Button onClick={onAddToCart} disabled={isSoldOut}>
+        {isSoldOut ? "Sold out" : "Add to Cart"}
+      </Button>
+    </Card>
   );
 }
