@@ -21,7 +21,7 @@ export default function ProductListItem({
       </Heading>
       <img src={imageUrl} alt="" />
       <Text>{price}</Text>
-      <Button onClick={onAddToCart} getDisabled={isSoldOut}>
+      <Button onClick={onAddToCart} disabled={isSoldOut}>
         {isSoldOut ? "Sold out" : "Add to Cart"}
       </Button>
     </Card>
