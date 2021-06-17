@@ -17,7 +17,7 @@ export default function ProductListItem({
   return (
     <Card highlight={isOnSale}>
       <Heading>
-        {name} {isOnSale && "(On Sale)"}
+        {name} {isOnSale && <span>(On Sale)</span>}
       </Heading>
       <img src={imageUrl} alt="" />
       <Text>{price}</Text>

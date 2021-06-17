@@ -10,7 +10,7 @@ it ('shows on sale label when isOnSale', () => {
     imageUrl="..."
     isOnSale
   />)
-    expect(getByText(`Mocha (On Sale)`))
+    expect(getByText(`(On Sale)`))
     .toBeInTheDocument();
 })
 
@@ -38,7 +38,7 @@ it ('calls callback when button Add To Cart pressed', () => {
 
 it ('storybook - shows on sale label when isOnSale', () => {
   const { getByText } = render(<OnSale/>)
-  expect(getByText(`Standard Coffee (On Sale)`))
+  expect(getByText(`(On Sale)`))
     .toBeInTheDocument();
 })
 
