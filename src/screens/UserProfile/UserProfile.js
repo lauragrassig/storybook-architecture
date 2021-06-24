@@ -29,7 +29,7 @@ export default function UserProfile() {
   if(!user.data) { return null }
 
   return (
-    <Card>
+    <div className="card">
       <Heading>{user.data.name}</Heading>
       <Text>{user.data.memberSince}</Text>
       <Heading>
@@ -38,6 +38,6 @@ export default function UserProfile() {
           {user.data.recentOrders.map(order => <li key={order.id}>{order.name}</li>)}
         </ul>
       </Heading>
-    </Card>
+    </div>
   )
 }

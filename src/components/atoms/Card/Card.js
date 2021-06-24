@@ -1,7 +1,6 @@
-import React from 'react';
-import "../../../theme.css";
+import React from "react";
 import "./Card.css";
 
-export default function Card({ children }) {
+export default function Card({ children, highlight }) {
   return <div className="card">{children}</div>;
 }
