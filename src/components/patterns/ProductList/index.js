@@ -1,1 +1,1 @@
-export { default, statusTypes } from "./ProductList";
+export { default } from "./ProductList";

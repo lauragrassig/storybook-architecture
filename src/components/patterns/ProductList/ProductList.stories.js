@@ -1,5 +1,7 @@
 import React from "react";
-import ProductList, { statusTypes } from "./ProductList.js";
+import ProductList from "./ProductList";
+import { statusTypes } from '../../../constants/api'
+
 import { action } from "@storybook/addon-actions";
 
 export default { title: "patterns/ProductList" };
