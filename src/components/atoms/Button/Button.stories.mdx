@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import Button from './Button';
+<Meta title="atoms/Button" component={Button} />
+# Button
+
+This is the **Button** yay!
+
+<Button onClick="{console.log}>Click Here</Button>
+
+_This is a button outside of the storybook canvas_ 
+
+## More Documentation
+<Canvas>
+  <Story name="standard">
+    <Button onClick={...}> Click here </Button>
+  </Story>
+</Canvas>
+
+Other markdown like [Links](http://www.google.com.br) work also!
